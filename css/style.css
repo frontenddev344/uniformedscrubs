@@ -534,6 +534,7 @@ h6 {
 .add-on-section .row:first-child .add-on-content {
     position: relative;
     transform: translateX(60px);
+    z-index: 1;
 }
 
 .add-on-section .row:last-child .add-on-content {
@@ -637,7 +638,7 @@ h6 {
 }
 
 .service-section {
-    padding: 40px 0;
+    padding: 40px 0 120px;
 }
 
 .service-card {
@@ -686,3 +687,101 @@ h6 {
 .logo-slide {
     padding: 0 30px;
 }
+
+
+.sale-countdown-section {
+    background: #e6e5e1;
+    padding: 20px;
+}
+.sale-countdown-content-wrap {
+    height: 500px;
+    position: relative;
+    display: grid;
+    place-content: center;
+}
+
+
+.sale-img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.sale-img img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.sale-countdown-content {
+    position: relative;
+    z-index: 1;
+    background: #ffffffad;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 0 10px 0 rgba(0 0 0 /20%);
+}
+
+.sale-countdown-content h2 {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+#countdown span {
+    color: #337ab7;
+    font-weight: 600;
+}
+
+.feature-product {
+    padding: 80px 0;
+}
+
+
+.blog-section {
+    padding: 80px 0;
+    background-color: #f8f9fa;
+  }
+  .blog-section .section-title {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+  }
+  .blog-card {
+    margin-bottom: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  .blog-card:hover {
+    transform: translateY(-10px);
+  }
+  .blog-image {
+    overflow: hidden;
+  }
+  .blog-image img {
+    transition: transform 0.3s ease;
+  }
+  .blog-card:hover .blog-image img {
+    transform: scale(1.05);
+  }
+  .blog-content {
+    padding: 20px;
+  }
+  .blog-content h3 {
+    color: #333;
+    margin-bottom: 10px;
+  }
+  .blog-content p {
+    color: #666;
+    margin-bottom: 20px;
+  }
+  .read-more {
+    display: inline-block;
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  .read-more:hover {
+    color: #0056b3;
+  }

@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
 /*global start*/
 * {
@@ -24,11 +25,13 @@ img {
     width: 100%;
 }
 
-a {
+a{
     text-decoration: none;
     color: inherit;
 }
-
+a:hover{
+    text-decoration: none;
+}
 a:focus {
     color: inherit;
 }
@@ -40,21 +43,49 @@ html {
 .container {
     max-width: 1275px;
 }
-
+.container::before, .container::after{
+    display: none !important;
+}
 :root {
     --cream-clr: #e6e5e1;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-family: "Noto Sans", sans-serif;
+body h1,
+body h2,
+body h3,
+body h4,
+body h5,
+body h6 {
+    font-family: "Montserrat", sans-serif;
 }
 
 /*global end*/
+
+.announcement-section {
+    background: #111;
+    color: #fff;
+}
+
+.announcement-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.announcement-content a {
+    color: #fff;
+    text-decoration: underline;
+}
+.announcement-content svg {
+    width: 30px;
+}
+.announcement-content svg path {
+    fill: #fff;
+}
+.announcement-content h2 {
+    margin: 0;
+    font-size: 14px;
+}
 
 /*header start*/
 .site-header {
@@ -80,8 +111,12 @@ h6 {
 .site-logo a {
     font-weight: 700;
     font-size: 24px;
+    color: #337ab7;
 }
-
+.site-logo a:hover{
+    text-decoration: none;
+    color: #337ab7;
+}
 .site-logo img {
     max-width: 10rem;
 }
@@ -89,14 +124,10 @@ h6 {
 .site-nav ul {
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
+    margin: 0;
 }
 
-.site-nav li a {
-    font-size: 1.7rem;
-    display: inline-block;
-    padding: 0.8rem 2rem;
-    text-transform: capitalize;
-}
 
 .site-nav li a {
     font-size: 1.6rem;
@@ -105,12 +136,17 @@ h6 {
     text-transform: capitalize;
     color: #111;
     position: relative;
+    font-family: 'Montserrat';
+}
+
+.site-nav li a:hover {
+    text-decoration: none;
 }
 
 .site-nav li a::after {
     content: "";
     position: absolute;
-    border-bottom: 0.2rem solid #f39c12;
+    border-bottom: 0.2rem solid #111;
     width: 0%;
     top: 100%;
     left: 0%;
@@ -172,24 +208,29 @@ h6 {
     flex-wrap: wrap;
 }
 
-.social-icons a:last-child {
+.social-icons a {
     display: inline-block;
-    background: #7f8c8d;
+    background: #fff;
     margin-right: 1rem;
-    width: 4.5rem;
-    height: 4.5rem;
-    line-height: 4.5rem;
+    width: 3.5rem;
+    height: 3.5rem;
+    line-height: 3.5rem;
     text-align: center;
-    font-size: 2.5rem;
+    font-size: 1.8rem;
     border-radius: 50%;
     transition: all 0.3s ease-in-out;
+    color: #111;
 }
 
-.social-icons a:last-child:hover {
-    color: #f39c12;
-    transform: rotate(180deg);
+.footer-logo a {
+    font-size: 24px;
+    color: #fff;
+    font-weight: 700;
 }
-
+.footer-logo a:hover{
+    text-decoration: none;
+    color: #fff;
+}
 .useful-links li a {
     color: #fff;
     text-transform: capitalize;
@@ -214,7 +255,12 @@ h6 {
 
 
 /* banner slider start  */
-
+.slide__img:before {
+    content: "";
+    position: absolute;
+    background: #1111111f;
+    inset: 0;
+}
 @media (min-width: 992px) {
 
     .slider,
@@ -232,6 +278,7 @@ h6 {
     height: auto;
     overflow: hidden;
 }
+
 
 @media (min-width: 992px) {
     .slide .slide__img {
@@ -630,8 +677,8 @@ h6 {
 .section-title::before {
     content: "";
     position: absolute;
-    width: 60px;
-    border-bottom: 1px solid #dadada;
+    width: 90px;
+    border-bottom: 2px solid #dadada;
     left: 50%;
     top: 100%;
     transform: translateX(-50%);
@@ -727,6 +774,7 @@ h6 {
 .sale-countdown-content h2 {
     font-size: 30px;
     font-weight: 600;
+    margin: 0 0 10px;
 }
 
 #countdown span {
@@ -752,6 +800,7 @@ h6 {
     margin-bottom: 30px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
+    height: 100%;
   }
   .blog-card:hover {
     transform: translateY(-10px);
@@ -770,18 +819,108 @@ h6 {
   }
   .blog-content h3 {
     color: #333;
-    margin-bottom: 10px;
-  }
+    margin: 0 0 10px;
+}
   .blog-content p {
     color: #666;
     margin-bottom: 20px;
+    font-size: 16px;
   }
   .read-more {
     display: inline-block;
-    color: #007bff;
-    text-decoration: none;
+    color: #666;
     transition: color 0.3s ease;
-  }
+    text-decoration: underline;
+}
   .read-more:hover {
     color: #0056b3;
   }
+
+  .discount-section {
+    background: #e2e2e2;
+}
+
+
+.discount-card {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px , 1fr));
+    align-items: center;
+}
+.discount-image {
+    height: 380px;
+    position: relative;
+    isolation: isolate;
+}
+
+.discount-image::before {
+    content: "";
+    position: absolute;
+    width: 280px;
+    aspect-ratio: 1;
+    background: #337ab71c;
+    border-radius: 50%;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    z-index: -1;
+}
+.discount-image img {
+    max-width: 300px;
+    height: 100%;
+    object-fit: contain;
+}
+
+.discount-content a {
+    background: #111;
+    padding: 10px;
+    display: inline-block;
+    color: #ffff;
+    font-size: 14px;
+    text-transform: capitalize;
+}
+
+.discount-content h3 {
+    font-size: 26px;
+}
+.discount-content p {
+    font-size: 16px;
+}
+
+.newsletter-section {
+    background-color: #f9f9f9;
+    padding: 50px 0;
+  }
+  .newsletter-content {
+    text-align: center;
+    max-width: 500px;
+    margin: 0 auto;
+}
+  .newsletter-content h2 {
+    font-size: 2em;
+    color: #333;
+  }
+  .newsletter-content p {
+    font-size: 1.2em;
+    color: #666;
+  }
+  .form-group {
+    margin-top: 20px;
+  }
+  .form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 0;
+    height: 40px;
+}
+  .form-group button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 0;
+    background-color: #111;
+    color: #fff;
+    cursor: pointer;
+    font-family: 'Jost';
+    margin: 10px 0 0;
+}

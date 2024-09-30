@@ -1,5 +1,12 @@
 /*media queries start*/
-@media screen and (max-width:768px){
+
+@media screen and (max-width:1200px) {
+	.site-nav li a {
+		font-size: 1.4rem;
+		padding: 0.8rem 1.3rem;
+	}
+}
+@media screen and (max-width:991px){
 	.site-nav {
 	    position: fixed;
 	    top: 0;
@@ -17,6 +24,7 @@
 	    padding: 30px 60px 0;
 	}
 
+	
 	.menu-toggle{
 		display: block;
 	}
@@ -34,6 +42,10 @@
     	transform: translateX(0);
 	}
 
+	.site-nav li a {
+		color: #fff;
+		font-size: 1.8rem;
+	}
 
 	/*footer start*/
 

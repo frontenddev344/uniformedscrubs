@@ -160,6 +160,9 @@ body h6 {
     transition: all 0.3s linear;
 }
 
+.closed-menu a {
+    color: #fff;
+}
 .menu-toggle {
     display: none;
 }

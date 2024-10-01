@@ -610,16 +610,18 @@ body h6 {
     text-decoration: none;
 }
 
-.add-on-section .row:first-child .add-on-content {
+.add-on-section .row:first-of-type .add-on-content {
     position: relative;
     transform: translateX(60px);
     z-index: 1;
 }
 
-.add-on-section .row:last-child .add-on-content {
+.add-on-section .row:last-of-type .add-on-content {
     position: relative;
     transform: translateX(-60px);
 }
+
+
 
 
 .product-card {

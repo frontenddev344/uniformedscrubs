@@ -5,6 +5,14 @@
 		font-size: 1.4rem;
 		padding: 0.8rem 1.3rem;
 	}
+	.best-deals .col-md-12 {
+		order: 3;
+	}
+	.deal.middle-deal .deal-text {
+		position: static;
+		transform: translate(0, 0);
+		width: 100%;
+	}
 }
 @media screen and (max-width:991px){
 	.site-nav {
@@ -49,45 +57,113 @@
 
 	/*footer start*/
 
-	.social-icons {
-    	text-align: center;
-	}
-
-	.social-icons ul {
-	    display: flex;
-	    flex-wrap: wrap;
-	    justify-content: center;
-	}
-
 	.social-icons p {
 	    color: #fff;
-	    margin: 1.5rem 0;
+	    margin: 1.5rem 0 3rem;
 	    font-size: 1.4rem;
 	}
 
-	.useful-links {
-	    text-align: center;
-	    margin: 2rem;
+	
+}
+
+@media screen and (max-width:768px) {
+	.add-on-section .row:first-of-type .add-on-content, 
+	.add-on-section .row:last-of-type .add-on-content {
+		transform: translateX(0);
+	}
+	.add-on-section .row:last-of-type {
+		flex-direction: column-reverse;
+	}
+	.add-on-section .row {
+		row-gap: 40px;
+	}
+	.discount-section {
+		padding: 15px 15px;
+	}
+	.discount-card {
+		text-align: center;
+		margin: 0 0 40px;
+	}
+	.discount-image::before {
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+	.discount-card {
+		grid-template-columns:100%;
 	}
 
 	.our_service {
     	text-align: center;
+		margin: 40px 0;
 	}
 
 	.contact-us {
     	text-align: center;
+		margin: 0 0 40px;
 	}
+	.social-icons ul {
+		justify-content: center;
+	}
+	.social-icons {
+		text-align: center;
+	}
+	.footer-logo {
+		text-align: center;
+	}
+	.useful-links {
+		text-align: center;
+	}
+	.social-icons {
+		text-align: center;
+		max-width: 390px;
+		margin: 0 auto 40px;
+	}
+	
+}
 
-	.social-icons a:last-child {
-	    display: inline-block;
-	    background: #7f8c8d;
-	    margin-right: 1rem;
-	    width: 3.5rem;
-	    height: 3.5rem;
-	    line-height: 3.5rem;
-	    text-align: center;
-	    font-size: 2rem;
-	    border-radius: 50%;
-	    transition: all 0.3s ease-in-out;
+@media screen and (max-width:575px){
+	.site-logo a {
+		font-size: 20px;
 	}
+	.slide .slide__img {
+		height: 50vh;
+	}
+	.announcement-content h2 {
+		font-size: 12px;
+	}
+	.announcement-content {
+		gap: 6px;
+	}
+	.announcement-content a {
+		font-size: 10px;
+	}
+	.slide .slide__content--headings h2 {
+		font-size: 3.5rem;
+	}
+	.section-title {
+		font-size: 24px;
+	}
+	.add-on-section {
+		padding: 40px 0;
+	}
+	.best-deals {
+		padding: 40px 0;
+	}
+	.add-on-section {
+		padding: 40px 0;
+	}
+	.new-arrivals-section {
+		padding: 40px 0;
+	}
+	.service-section {
+		padding: 40px 0 40px;
+	}
+	.feature-product {
+		padding: 40px 0;
+	}
+	.blog-section {
+		padding: 40px 0;
+	}
+	
 }
